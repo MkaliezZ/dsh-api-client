@@ -32,7 +32,7 @@ export function validateRequest(input: ApiRequestInput, { allowRemote = false, m
   if (body && Buffer.byteLength(body) > maxBodyBytes) throw new Error('body too large');
   const headers: Record<string, string> = {};
   for (const [key, value] of Object.entries(input.headers ?? {})) {
-    if (/authorization|cookie|x-api-key/i.test(key)) throw new Error('sensitive header requires explicit host policy');
+    if (/authorization|cookie|x-api-key/i.test(key)) throw new Error('sensitive header blocked: authorization, cookie, and api-key headers are not allowed through this client');
     headers[key] = String(value);
   }
   return { method: String(input.method ?? 'GET').toUpperCase(), url: url.toString(), headers, body };
