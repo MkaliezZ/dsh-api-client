@@ -1,6 +1,6 @@
 {
     "name":  "@mkaliezz/dsh-api-client",
-    "version":  "0.2.1",
+    "version": "0.2.2",
     "type":  "module",
     "private":  false,
     "description":  "DSH plugin: dsh-api-client",
