@@ -1,3 +1,4 @@
-- id: dsh-api-client
-  name: '@mkaliezz/dsh-api-client'
-  config: {}
+- insert:
+    - id: dsh-api-client
+      name: '@mkaliezz/dsh-api-client'
+      config: {}
